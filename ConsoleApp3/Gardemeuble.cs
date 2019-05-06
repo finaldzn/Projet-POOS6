@@ -8,6 +8,7 @@ namespace ConsoleApp3
 {
     class Gardemeuble
     {
+        //commentaire
         Dictionary<string, string> dateDep ;
         Dictionary<string, string> dateDonné;
         Dictionary<string, Personne> beneficiaire;
