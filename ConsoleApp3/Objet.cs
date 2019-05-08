@@ -8,13 +8,15 @@ namespace ConsoleApp3
 {
     class Objet
     {
-        string objetid, Type, Description, LieuStock;
+        protected string objetid, Type, Description, LieuStock;
         Beneficiaire benef;
         int Montant;
         bool vendu;
+        string état;
 
-        public Objet(string objetid, string type, string description, string lieuStock, int montant)
+        public Objet(string objetid, string type, string description, string état, string lieuStock, int montant)
         {
+            this.état = état;
             this.Objetid = objetid;
             this.Type = type;
             Description1 = description;
@@ -29,6 +31,7 @@ namespace ConsoleApp3
         }
         public string Objetid { get => objetid; set => objetid = value; }
         public string Type1 { get => Type;  }
+        public string Etat { get => état; }
         public string Description1 { get => Description; set => Description = value; }
         public string LieuStock1 { get => LieuStock; set => LieuStock = value; }
         public int Montant1 { get => Montant; set => Montant = value; }

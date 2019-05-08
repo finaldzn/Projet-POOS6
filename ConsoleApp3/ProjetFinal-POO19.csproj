@@ -64,6 +64,7 @@
     <Compile Include="Don.cs" />
     <Compile Include="Gardemeuble.cs" />
     <Compile Include="IPersonne.cs" />
+    <Compile Include="Matelas.cs" />
     <Compile Include="MembreAsso.cs" />
     <Compile Include="MobilierChambre.cs" />
     <Compile Include="Objet.cs" />

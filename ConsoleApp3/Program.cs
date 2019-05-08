@@ -14,6 +14,8 @@ namespace ConsoleApp3
             association.Peupler();
             Console.WriteLine(association.getmoyAge());
             
+            Matelas f = new Matelas("joj", "ihz", "sfljzf", "ihfj", 65);
+            Console.WriteLine(f.Type1);
 
             Objet objet = new Objet("1", "chaise", "chaise rouge", "Association", 0);
             association.NouveauDon("01/05/2019", "chaise", "chaise rouge", true, objet,true,"1");

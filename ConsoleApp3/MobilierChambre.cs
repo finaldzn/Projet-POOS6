@@ -8,8 +8,9 @@ namespace ConsoleApp3
 {
     class MobilierChambre : Objet
     {
-        public MobilierChambre(string objetid, string type, string description, string lieuStock, int montant):base(objetid, type, description, lieuStock, montant)
+        public MobilierChambre(string objetid, string Type, string description, string lieuStock, int montant):base(objetid, Type, description, lieuStock, montant)
             {
+            this.Type = "Chambre";
             }
     }
 }
