@@ -54,7 +54,10 @@ namespace ConsoleApp3
             {
             }
         }
-
+        /// <summary>
+        /// où l'objet doit être stocké
+        /// </summary>
+        /// <param name="endroit">lieu de stock</param>
         public void Stockage(string endroit)
         {
             Objet.LieuStock1 = endroit;

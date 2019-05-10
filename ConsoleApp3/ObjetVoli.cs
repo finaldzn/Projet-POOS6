@@ -12,7 +12,7 @@ namespace ConsoleApp3
 
         
 
-        public ObjetVoli(string objetid, string type, string description, string lieuStock,  int montant, int hauteur, int largeur, int longueur) :base(objetid, type, description, lieuStock, montant)
+        public ObjetVoli(string objetid, string type, string description, string lieuStock,  int montant, int hauteur, int largeur, int longueur, string etat) :base(objetid, type, description,etat, lieuStock, montant)
         {
             base.Vendu = false;
             this.Hauteur = hauteur;

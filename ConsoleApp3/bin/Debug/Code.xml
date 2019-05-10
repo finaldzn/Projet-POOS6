@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleApp3</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleApp3.Association">
+            <summary>
+            Classe Association, toutes les fonctionalités sont appelés de cet classe afin d'éviter 
+            un nombre de fonctions importants dans le main
+            </summary>
+        </member>
+        <member name="M:ConsoleApp3.Association.Peupler">
+            <summary>
+            lis et classe les adhérents et bénificiaire des fichiers
+            </summary>
+        </member>
+        <member name="M:ConsoleApp3.Association.findPhone(System.String)">
+            <summary>
+            trouve un benificiaire avec un numéro de téléphone spécifique
+            </summary>
+            <param name="phone">numéro de téléphone à rechercher</param>
+            <returns>Le Beneficaire correspondant</returns>
+        </member>
+        <member name="M:ConsoleApp3.Association.findName(System.String)">
+            <summary>
+            trouve un benificaire à partir d'un nom
+            </summary>
+            <param name="name">nom à rechercher</param>
+            <returns>Le benificaire correspondant</returns>
+        </member>
+        <member name="M:ConsoleApp3.Association.NouveauDon(System.String,System.String,System.String,System.Boolean,ConsoleApp3.Objet,System.Boolean,System.String)">
+            <summary>
+            crée un nouveau don
+            </summary>
+            <param name="dateRecept"></param>
+            <param name="typeMat"></param>
+            <param name="descSupp"></param>
+            <param name="Accepter"></param>
+            <param name="objet"></param>
+            <param name="stocker"></param>
+            <param name="MembreAssoID"></param>
+        </member>
+        <member name="M:ConsoleApp3.Association.getmoyTemps">
+            <summary>
+            avoir les stats concernant la moyenne entre les date de dépot et de vente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConsoleApp3.Association.getmoyPrix">
+            <summary>
+            avoir la moy d'âge
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConsoleApp3.Association.getmoyAge">
+            <summary>
+            avoir la moyenne de l'âges des membres
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConsoleApp3.Don.Stockage(System.String)">
+            <summary>
+            où l'objet doit être stocké
+            </summary>
+            <param name="endroit">lieu de stock</param>
+        </member>
+        <member name="M:ConsoleApp3.Objet.vendre(ConsoleApp3.Beneficiaire)">
+            <summary>
+            a appeler lorsque l'on souhaite vendre ou donner un objet
+            </summary>
+            <param name="benef"></param>
+        </member>
+        <member name="M:ConsoleApp3.Stockage.BougezDon(System.String,System.Int32,System.Int32)">
+            <summary>
+            De Association à DépotVente
+            </summary>
+            <param name="objetID"></param>
+            <param name="i"></param>
+            <param name="montant"></param>
+        </member>
+        <member name="M:ConsoleApp3.Stockage.BougezDon(System.String,System.Int32,ConsoleApp3.Beneficiaire)">
+            <summary>
+            De Association à GardeMeuble
+            </summary>
+            <param name="objetID"></param>
+            <param name="i"></param>
+            <param name="benef"></param>
+        </member>
+        <member name="M:ConsoleApp3.Stockage.getRefused">
+            <summary>
+            avoir les Don refusé
+            </summary>
+            <returns>List de Don</returns>
+        </member>
+        <member name="M:ConsoleApp3.Stockage.getEnAttente">
+            <summary>
+            avoir les Don en attente
+            </summary>
+            <returns>Liste de Don</returns>
+        </member>
+        <member name="M:ConsoleApp3.Stockage.getSold">
+            <summary>
+            avoir les don vendus
+            </summary>
+            <returns>List de string</returns>
+        </member>
+        <member name="M:ConsoleApp3.Stockage.getEntrepotList">
+            <summary>
+            avoir la liste des objets contenus dans l'entrepots
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConsoleApp3.Stockage.getEntrepotVolumeList">
+            <summary>
+            avoir le volume des objets contenus dans l'entrepots
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ConsoleApp3.Stockage.getDepotVente">
+            <summary>
+            avoir les Dons contenus dans le depot vente
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

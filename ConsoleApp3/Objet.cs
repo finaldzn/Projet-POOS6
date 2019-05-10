@@ -24,6 +24,10 @@ namespace ConsoleApp3
             this.Vendu = false;
             Montant1 = montant;
         }
+        /// <summary>
+        /// a appeler lorsque l'on souhaite vendre ou donner un objet
+        /// </summary>
+        /// <param name="benef"></param>
         public void vendre(Beneficiaire benef)
         {
             this.Benef = benef;

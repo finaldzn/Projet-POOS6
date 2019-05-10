@@ -60,24 +60,40 @@ namespace ConsoleApp3
             AddGardeMeuble(benef, var);
         }
         #region Tris
+        /// <summary>
+        /// avoir les Don refusé
+        /// </summary>
+        /// <returns>List de Don</returns>
         public List<Don> getRefused()
         {
             List<Don> result = Association.FindAll(x => x.Accepter1 == false);
             result = result.OrderByDescending(o => o.DateRecept).ToList();
             return result;
         }
+        /// <summary>
+        /// avoir les Don en attente
+        /// </summary>
+        /// <returns>Liste de Don</returns>
         public List<Don> getEnAttente()
         {
             
             List<Don> result = Association.OrderBy(o => o.ObjetID).ThenBy(o => o.Donateur1).ToList();
             return result;
         }
+        /// <summary>
+        /// avoir les don vendus
+        /// </summary>
+        /// <returns>List de string</returns>
         public List<string> getSold()
         {
             List<string> result = DépotVente.getListSold();
             result.OrderBy(x => x.Split(';')[3]).ThenBy(x => DépotVente.Objets[x.Split(';')[0]].Objet.Benef);
             return result;
         }
+        /// <summary>
+        /// avoir la liste des objets contenus dans l'entrepots
+        /// </summary>
+        /// <returns></returns>
         public List<string> getEntrepotList()
         {
             List<string> result = new List<string>();
@@ -98,6 +114,10 @@ namespace ConsoleApp3
             result.OrderBy(o => o.Split(';')[3]).ThenBy(o => o.Split(';')[1]).ThenBy(o=>o.Split(';')[2]);
             return result;
         }
+        /// <summary>
+        /// avoir le volume des objets contenus dans l'entrepots
+        /// </summary>
+        /// <returns></returns>
         public List<string> getEntrepotVolumeList()
         {
             List<string> result = new List<string>();
@@ -118,6 +138,10 @@ namespace ConsoleApp3
             result.OrderBy(o => o.Split(';')[3]).ThenBy(o => o.Split(';')[1]).ThenBy(o => o.Split(';')[2]);
             return result;
         }
+        /// <summary>
+        /// avoir les Dons contenus dans le depot vente
+        /// </summary>
+        /// <returns></returns>
         public List<string> getDepotVente()
         {
             List<string> x = DépotVente.getListElement();

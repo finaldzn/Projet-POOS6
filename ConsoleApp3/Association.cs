@@ -7,6 +7,10 @@ using System.IO;
 
 namespace ConsoleApp3
 {
+    /// <summary>
+    /// Classe Association, toutes les fonctionalités sont appelés de cet classe afin d'éviter 
+    /// un nombre de fonctions importants dans le main
+    /// </summary>
     class Association
     {
         Stockage stockage;
@@ -25,7 +29,9 @@ namespace ConsoleApp3
         }
 
        
-
+        /// <summary>
+        /// lis et classe les adhérents et bénificiaire des fichiers
+        /// </summary>
         public void Peupler()
         {
             string[] n = File.ReadAllLines("files/Adherents.txt");
@@ -51,6 +57,11 @@ namespace ConsoleApp3
                 
             }
         }
+        /// <summary>
+        /// trouve un benificiaire avec un numéro de téléphone spécifique
+        /// </summary>
+        /// <param name="phone">numéro de téléphone à rechercher</param>
+        /// <returns>Le Beneficaire correspondant</returns>
         public Beneficiaire findPhone(string phone)
         {
             foreach (KeyValuePair<string,Beneficiaire> elem in Benificaires)
@@ -63,6 +74,11 @@ namespace ConsoleApp3
             Beneficiaire b = new Beneficiaire();
             return b;
         }
+        /// <summary>
+        /// trouve un benificaire à partir d'un nom
+        /// </summary>
+        /// <param name="name">nom à rechercher</param>
+        /// <returns>Le benificaire correspondant</returns>
         public Beneficiaire findName(string name)
         {
             foreach (KeyValuePair<string, Beneficiaire> elem in Benificaires)
@@ -75,13 +91,23 @@ namespace ConsoleApp3
             Beneficiaire b = new Beneficiaire();
             return b;
         }
+        /// <summary>
+        /// crée un nouveau don
+        /// </summary>
+        /// <param name="dateRecept"></param>
+        /// <param name="typeMat"></param>
+        /// <param name="descSupp"></param>
+        /// <param name="Accepter"></param>
+        /// <param name="objet"></param>
+        /// <param name="stocker"></param>
+        /// <param name="MembreAssoID"></param>
         public void NouveauDon(string dateRecept, string typeMat, string descSupp, bool Accepter, Objet objet, bool stocker, string MembreAssoID)
         {
             Don var = new Don(dateRecept, typeMat, descSupp, Personnel[MembreAssoID], Accepter, objet);
             Stockage.AddAssociation(var);
             
         }
-        //S'occuper des don
+        
         private List<int> decomposerDate(string date)
         {
             List<int> value = new List<int>();
@@ -92,6 +118,10 @@ namespace ConsoleApp3
             return value;
         }
         #region statistique
+        /// <summary>
+        /// avoir les stats concernant la moyenne entre les date de dépot et de vente
+        /// </summary>
+        /// <returns></returns>
         public float getmoyTemps()
         {
             List<string> x = Stockage.getSold();
@@ -105,6 +135,10 @@ namespace ConsoleApp3
             moy = moy / x.Count;
             return moy;
         }
+        /// <summary>
+        /// avoir la moy d'âge
+        /// </summary>
+        /// <returns></returns>
         public float getmoyPrix()
         {
             List<string> x = stockage.getDepotVente();
@@ -116,6 +150,10 @@ namespace ConsoleApp3
             moy = moy / x.Count;
             return moy;
         }
+        /// <summary>
+        /// avoir la moyenne de l'âges des membres
+        /// </summary>
+        /// <returns></returns>
         public float getmoyAge()
         {
             float moy = 0;
