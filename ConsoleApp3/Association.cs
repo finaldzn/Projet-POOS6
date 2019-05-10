@@ -62,6 +62,36 @@ namespace ConsoleApp3
                 
             }
         }
+
+        public void Lirepersonne()
+        {
+            Console.WriteLine("Bénéficiaires : ");
+            Console.WriteLine("[ ID | Nom | Adresse | Téléphone | Prénom | Date de naissance ]");
+            foreach (KeyValuePair<string, Beneficiaire> elem in Benificaires)
+            {
+
+                foreach (string x in elem.ToString().Split(';'))
+                {
+                    Console.Write(x + " | ");
+
+                }
+                Console.WriteLine("");
+            }
+
+            Console.WriteLine("Personnels : ");
+            Console.WriteLine("[ ID | Nom | Adresse | Téléphone | Prénom | Date de naissance ] ");
+            foreach (KeyValuePair<string, MembreAsso> elem in Personnel)
+            {
+                foreach (string x in elem.ToString().Split(';'))
+                {
+                    Console.Write(x + " | ");
+
+                }
+                Console.WriteLine("");
+            }
+
+
+        }
         /// <summary>
         /// trouve un benificiaire avec un numéro de téléphone spécifique
         /// </summary>
