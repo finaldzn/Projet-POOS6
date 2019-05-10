@@ -45,15 +45,19 @@ namespace ConsoleApp3
         public MembreAsso Donateur1 { get => Donateur; set => Donateur = value; }
         public bool Accepter1 { get => Accepter; set => Accepter = value; }
         public bool Stocker { get => stocker; set => stocker = value; }
-        internal Objet Objet { get => objet; set => objet = value; }
 
-        internal Objet Objet1
+        internal Objet Objet
         {
-            get => default(Objet);
+            get => objet;
             set
             {
+                objet = value;
             }
         }
+
+
+
+
         /// <summary>
         /// où l'objet doit être stocké
         /// </summary>

@@ -20,7 +20,21 @@ namespace ConsoleApp3
             Association = new List<Don>();
         }
 
-        
+        internal DepotVente DepotVente
+        {
+            get => default(DepotVente);
+            set
+            {
+            }
+        }
+
+        internal Gardemeuble Gardemeuble
+        {
+            get => default(Gardemeuble);
+            set
+            {
+            }
+        }
 
         public void AddGardeMeuble( Personne Benificiaire,Don var)
         {

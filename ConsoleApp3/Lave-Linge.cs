@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
-    class Lave_Linge
+    class Lave_Linge:Electro_menager
     {
+        public Lave_Linge(string objetid, string Type, string description, string lieuStock, int montant, string etat) : base(objetid, Type, description, lieuStock, montant, etat)
+        {
+            this.Description = "Lave_Linge";
+        }
     }
 }

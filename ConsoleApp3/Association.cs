@@ -17,9 +17,14 @@ namespace ConsoleApp3
         Dictionary<string, MembreAsso> personnel;
         Dictionary<string, Beneficiaire> benificaires;
 
-        internal Stockage Stockage { get => stockage; set => stockage = value; }
+        
         internal Dictionary<string, MembreAsso> Personnel { get => personnel; set => personnel = value; }
         internal Dictionary<string, Beneficiaire> Benificaires { get => benificaires; set => benificaires = value; }
+
+        internal Stockage Stockage
+        {
+            get => stockage; set => stockage = value;
+        }
 
         public Association()
         {
