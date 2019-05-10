@@ -62,6 +62,22 @@ namespace ConsoleApp3
                 
             }
         }
+        public void SupprimerBeneficiaire()
+        {
+            string sup;
+            Console.WriteLine("Entrez le nom du bénéficiaire à supprimer : ");
+            sup = Console.ReadLine();
+            
+            if(findName(sup)!= null)
+            {
+                Benificaires.Remove(findName(sup).Identifiant);
+            }
+            else
+            {
+                Console.WriteLine("Ce beneficiaire n'est pas dans votre association");
+            }
+
+        }
 
         public void Lirepersonne()
         {
@@ -106,8 +122,7 @@ namespace ConsoleApp3
                     return elem.Value;
                 }
             }
-            Beneficiaire b = new Beneficiaire();
-            return b;
+            return null;
         }
         /// <summary>
         /// trouve un benificaire à partir d'un nom
@@ -123,8 +138,7 @@ namespace ConsoleApp3
                     return elem.Value;
                 }
             }
-            Beneficiaire b = new Beneficiaire();
-            return b;
+            return null;
         }
         /// <summary>
         /// crée un nouveau don

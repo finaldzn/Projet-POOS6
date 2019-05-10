@@ -13,3 +13,4 @@ C:\Users\Wassim Serradj\Documents\GitHub\Projet-POOS6\ConsoleApp3\obj\Debug\Proj
 C:\Users\Wassim Serradj\Documents\GitHub\Projet-POOS6\ConsoleApp3\obj\Debug\ConsoleApp3.exe
 C:\Users\Wassim Serradj\Documents\GitHub\Projet-POOS6\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
 C:\Users\Victor\source\repos\ConsoleApp3\ConsoleApp3\bin\Debug\Code.xml
+C:\Users\Wassim Serradj\Documents\GitHub\Projet-POOS6\ConsoleApp3\bin\Debug\Code.xml

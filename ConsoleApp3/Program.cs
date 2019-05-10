@@ -12,9 +12,10 @@ namespace ConsoleApp3
         {
             Association association = new Association();
             association.Peupler();
+
             /* Console.WriteLine(association.getmoyAge());
 
-
+           
 
              Objet objet = new Objet("1", "Salon", "chaise rouge","neuf", "Association", 0);
              association.NouveauDon("01/05/2019", "chaise", "chaise rouge", true, objet,true,"1");
@@ -68,8 +69,9 @@ namespace ConsoleApp3
                             //
                             Console.WriteLine();
                             Console.WriteLine("1 : Lire les Personnes de l'association");
-                            Console.WriteLine("2 : Rechercher selon téléphone ou nom");
-                            Console.WriteLine("3 : Sortir de ce module");
+                            Console.WriteLine("2 : Rechercher un beneficiaire selon téléphone ou nom");
+                            Console.WriteLine("3 : Supprimer un beneficiaire");
+                            Console.WriteLine("4 : Sortir de ce module");
                             //
                             do
                             {
@@ -79,7 +81,7 @@ namespace ConsoleApp3
                                 Console.Write("\nchoisissez un programme > ");
                                 lecture1 = Console.ReadLine();
                                 Console.WriteLine(lecture1);
-                                if (lecture1 == "" || !"123".Contains(lecture1[0]))
+                                if (lecture1 == "" || !"1234".Contains(lecture1[0]))
                                 {
                                     Console.WriteLine("votre choix <" + lecture1 + "> n'est pas valide = > recommencez ");
                                     valid1 = false;
@@ -106,6 +108,10 @@ namespace ConsoleApp3
                                     }                                  
                                     break;
                                 case '3':
+                                    Console.Clear();
+                                    association.SupprimerBeneficiaire();
+                                    break;
+                                case '4':
                                     Console.Clear();
                                     fin1 = true;
                                     break;
@@ -157,14 +163,124 @@ namespace ConsoleApp3
                                     Console.Clear();
                                     string datereception, typeMat, descSupp;
                                     bool Accepter;
-                                    Objet objet;
+                                    Objet newobjet;
                                     bool stocker;
                                     string MembreAssoID, objetid, type, description, état, lieuStock;
-                                    int montant;
+                                    int montant = 0;
+                                    Console.Clear();
+
+                                    Console.WriteLine(" Entrez votre identifiant personnel : ");
+                                    MembreAssoID = Console.ReadLine();
+                                    // pas d'information concernant la gestion des id des objets
+                                    Console.Clear();
+
+                                    Console.WriteLine(" Entrez l'id de l'objet : ");
+                                    objetid = Console.ReadLine();
+
+                                    // string dateRecept, string typeMat, string descSupp, bool Accepter, Objet objet, bool stocker, string MembreAssoID
+                                    // string objetid, string type, string description, string état, string lieuStock, int montant
+                                    Console.Clear();
+
                                     Console.WriteLine(" Entrez la date de reception du don au format jour/mois/année : ");
                                     datereception = Console.ReadLine();
+                                    Console.Clear();
+
                                     Console.WriteLine(" Entrez le type de materiaux : ");
                                     typeMat = Console.ReadLine();
+                                    Console.Clear();
+
+                                    Console.WriteLine(" Entrez l'état du don : ");
+                                    état = Console.ReadLine();
+
+
+
+                                    bool valid5 = true;
+                                    string lecture5 = "";
+
+                                    Console.WriteLine();
+                                    Console.WriteLine("Acceptez-vous ce don ? ");
+                                    Console.WriteLine("1 : oui");
+                                    Console.WriteLine("2 : non");
+
+                                    //
+                                    do
+                                    {
+                                        lecture5 = "";
+                                        valid5 = true;
+
+                                        Console.Write("\nchoisissez un programme > ");
+                                        lecture5 = Console.ReadLine();
+                                        Console.WriteLine(lecture5);
+                                        if (lecture5 == "" || !"1234".Contains(lecture5[0]))
+                                        {
+                                            Console.WriteLine("votre choix <" + lecture5 + "> n'est pas valide = > recommencez ");
+                                            valid5 = false;
+                                        }
+                                    } while (!valid5);
+                                    //
+                                    //
+                                    switch (lecture5[0])
+                                    {
+                                        case '1':
+                                            Console.Clear();
+                                            Accepter = true;
+                                            break;
+                                        case '2':
+                                            Console.Clear();
+                                            Accepter = false;
+                                            break;
+
+
+
+                                        default:
+                                            Console.WriteLine("\nchoix non valide => faites un autre choix....");
+                                            break;
+                                    }
+
+
+
+                                    Console.WriteLine();
+                                    Console.WriteLine("Souhaitez-vous le stocker ? ");
+                                    Console.WriteLine("1 : oui");
+                                    Console.WriteLine("2 : non");
+                                    bool valid6 = true;
+                                    string lecture6 = "";
+                                    //
+                                    do
+                                    {
+                                        lecture6 = "";
+                                        valid6 = true;
+
+                                        Console.Write("\nchoisissez un programme > ");
+                                        lecture6 = Console.ReadLine();
+                                        Console.WriteLine(lecture6);
+                                        if (lecture6 == "" || !"1234".Contains(lecture6[0]))
+                                        {
+                                            Console.WriteLine("votre choix <" + lecture6 + "> n'est pas valide = > recommencez ");
+                                            valid6 = false;
+                                        }
+                                    } while (!valid6);
+                                    //
+                                    //
+                                    switch (lecture6[0])
+                                    {
+                                        case '1':
+                                            Console.Clear();
+                                            stocker = true;
+                                            break;
+                                        case '2':
+                                            Console.Clear();
+                                            stocker = false;
+                                            break;
+
+
+
+                                        default:
+                                            Console.WriteLine("\nchoix non valide => faites un autre choix....");
+                                            break;
+                                    }
+                                    typeMat = Console.ReadLine();
+
 
                                     bool fin3 = false;
                                     bool valid3 = true;
@@ -181,6 +297,7 @@ namespace ConsoleApp3
                                         Console.WriteLine("2 : Mobilier Salle ou Cuisine");
                                         Console.WriteLine("3 : Electro-ménager");
                                         Console.WriteLine("4 : Vaisselle");
+                                        Console.WriteLine("5 : Autre");
                                        
                                         //
                                         do
@@ -191,7 +308,7 @@ namespace ConsoleApp3
                                             Console.Write("\nchoisissez un programme > ");
                                             lecture3 = Console.ReadLine();
                                             Console.WriteLine(lecture3);
-                                            if (lecture3 == "" || !"1234".Contains(lecture3[0]))
+                                            if (lecture3 == "" || !"12345".Contains(lecture3[0]))
                                             {
                                                 Console.WriteLine("votre choix <" + lecture3 + "> n'est pas valide = > recommencez ");
                                                 valid3 = false;
@@ -203,7 +320,55 @@ namespace ConsoleApp3
                                         {
                                             case '1':
                                                 Console.Clear();
+                                                bool fin4 = false;
+                                                bool valid4 = true;
+                                                string lecture4 = "";
 
+                                                //Menu interactif
+                                                //---------------
+                                                do
+                                                {
+                                                    fin4 = false;
+                                                    //
+                                                    Console.WriteLine();
+                                                    Console.WriteLine("1 : Un matelas");
+                                                    Console.WriteLine("2 : Un chevet");
+                                                    Console.WriteLine("3 : Une armoire");
+
+                                                    //
+                                                    do
+                                                    {
+                                                        lecture4 = "";
+                                                        valid4 = true;
+
+                                                        Console.Write("\nchoisissez un objet > ");
+                                                        lecture4 = Console.ReadLine();
+                                                        Console.WriteLine(lecture4);
+                                                        if (lecture4 == "" || !"123".Contains(lecture4[0]))
+                                                        {
+                                                            Console.WriteLine("votre choix <" + lecture4 + "> n'est pas valide = > recommencez ");
+                                                            valid4 = false;
+                                                        }
+                                                    } while (!valid4);
+                                                    //
+                                                    //
+                                                    switch (lecture4[0])
+                                                    {
+                                                        case '1':
+                                                            Console.Clear();
+                                                            
+                                                            break;
+                                                        case '2':
+                                                            Console.Clear();
+                                                            break;
+                                                        case '3':
+                                                            Console.Clear();
+                                                            break;                                                           
+                                                        default:
+                                                            Console.WriteLine("\nchoix non valide => faites un autre choix....");
+                                                            break;
+                                                    }
+                                                } while (!fin4);
                                                 break;
                                             case '2':
                                                 Console.Clear();
@@ -221,12 +386,7 @@ namespace ConsoleApp3
                                                 Console.Clear();
 
                                                 break;
-                                            case '6':
-                                                Console.Clear();
-                                                Console.WriteLine("fin de programme...");
-                                                Console.ReadKey();
-                                                fin3 = true;
-                                                break;
+
                                             default:
                                                 Console.WriteLine("\nchoix non valide => faites un autre choix....");
                                                 break;
@@ -234,14 +394,52 @@ namespace ConsoleApp3
                                     } while (!fin3);
                                     Console.WriteLine(" Entrez une description plus détaillé du don : ");
                                     descSupp = Console.ReadLine();
-                                    Console.WriteLine(" Entrez votre identifiant personnel : ");
-                                    MembreAssoID = Console.ReadLine();
-                                    // pas d'information concernant la gestion des id des objets
-                                    Console.WriteLine(" Entrez l'id de l'objet : ");
-                                    objetid = Console.ReadLine();
+                                    Console.WriteLine("Ou souhaitez vous le stocker ? ");
+                                    bool valid7 = true;
+                                    string lecture7 = "";
 
-                                    // string dateRecept, string typeMat, string descSupp, bool Accepter, Objet objet, bool stocker, string MembreAssoID
-                                    // string objetid, string type, string description, string état, string lieuStock, int montant
+                                    Console.WriteLine();
+
+                                    Console.WriteLine("1 : Garde Meuble");
+                                    Console.WriteLine("2 : Dépot Vente");
+                                    Console.WriteLine("3 : Association");
+
+                                    //
+                                    do
+                                    {
+                                        lecture7 = "";
+                                        valid7 = true;
+
+                                        Console.Write("\nchoisissez un programme > ");
+                                        lecture7 = Console.ReadLine();
+                                        Console.WriteLine(lecture7);
+                                        if (lecture7 == "" || !"123".Contains(lecture7[0]))
+                                        {
+                                            Console.WriteLine("votre choix <" + lecture7 + "> n'est pas valide = > recommencez ");
+                                            valid7 = false;
+                                        }
+                                    } while (!valid7);
+                                    //
+                                    //
+                                    switch (lecture7[0])
+                                    {
+                                        case '1':
+                                            Console.Clear();
+
+                                            break;
+                                        case '2':
+                                            Console.Clear();
+
+                                            break;
+                                        case '3':
+                                            Console.Clear();
+
+                                            break;
+                                        default:
+                                            Console.WriteLine("\nchoix non valide => faites un autre choix....");
+                                            break;
+                                    }
+
 
 
 
