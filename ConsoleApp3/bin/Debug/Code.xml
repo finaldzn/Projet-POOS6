@@ -71,7 +71,7 @@
             </summary>
             <param name="benef"></param>
         </member>
-        <member name="M:ConsoleApp3.Stockage.BougezDon(System.String,System.Int32,System.Int32)">
+        <member name="M:ConsoleApp3.Stockage.BougezDon(System.String,System.Int32)">
             <summary>
             De Association à DépotVente
             </summary>
@@ -79,12 +79,11 @@
             <param name="i"></param>
             <param name="montant"></param>
         </member>
-        <member name="M:ConsoleApp3.Stockage.BougezDon(System.String,System.Int32,ConsoleApp3.Beneficiaire)">
+        <member name="M:ConsoleApp3.Stockage.BougezDon(System.String,ConsoleApp3.Beneficiaire)">
             <summary>
             De Association à GardeMeuble
             </summary>
-            <param name="objetID"></param>
-            <param name="i"></param>
+            <param name="objetID"></param>        
             <param name="benef"></param>
         </member>
         <member name="M:ConsoleApp3.Stockage.getRefused">

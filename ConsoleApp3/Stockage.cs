@@ -55,7 +55,7 @@ namespace ConsoleApp3
         /// <param name="objetID"></param>
         /// <param name="i"></param>
         /// <param name="montant"></param>
-        public void BougezDon(string objetID,int i, int montant)
+        public void BougezDon(string objetID, int montant)
         {
             Don var = Association.Find(x => x.Objet.Objetid == objetID);                    
             Association.Remove(var);
@@ -64,10 +64,9 @@ namespace ConsoleApp3
         /// <summary>
         /// De Association à GardeMeuble
         /// </summary>
-        /// <param name="objetID"></param>
-        /// <param name="i"></param>
+        /// <param name="objetID"></param>        
         /// <param name="benef"></param>
-        public void BougezDon(string objetID, int i, Beneficiaire benef)
+        public void BougezDon(string objetID, Beneficiaire benef)
         {
             Don var = Association.Find(x => x.Objet.Objetid == objetID);
             Association.Remove(var);
