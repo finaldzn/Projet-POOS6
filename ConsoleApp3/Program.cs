@@ -688,8 +688,57 @@ namespace ConsoleApp3
                         } while (!fin2);
                         break;
                     case '3':
-                        Console.Clear();
 
+                        Console.Clear();
+                        Console.WriteLine("Que souhaitez vous regarder ? ");
+                        Console.WriteLine("1: Don refusés, triés par date \n2: Don en traitement par ID et Nom \n3: Don vendus/donnés par mois/BenefId \n4: Don stocker différents entrepôts classé par catégorie \n5: Don stocker par Entrepôts et par volume \n6: Dons du dépot-vente ");
+                        string value = Console.ReadLine();
+                        switch (value)
+                        {
+                            case "1":
+                                List<Don> a = association.Stockage.getRefused();
+                                foreach (Don elm in a)
+                                {
+                                    Console.WriteLine(a);
+                                }
+                                break;
+                            case "2":
+                                a = association.Stockage.getEnAttente();
+                                foreach (Don elm in a)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+                                break;
+                            case "3":
+                                List<string> v = association.Stockage.getSold();
+                                foreach (string elm in v)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+                                break;
+                            case "4":
+                                v = association.Stockage.getEntrepotList();
+                                foreach (string elm in v)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+                                break;
+                            case "5":
+                                v = association.Stockage.getEntrepotVolumeList();
+                                foreach (string elm in v)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+                                break;
+                            case "6":
+                                v = association.Stockage.getDepotVente();
+                                foreach (string elm in v)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+                                break;
+                        }
+                        Console.Clear();
                         break;
                     case '4':
                         Console.Clear();
