@@ -68,7 +68,7 @@ namespace ConsoleApp3
         }
         public override string ToString()
         {
-            return DateRecept+";"+TypeMat1+";"+";"+ObjetID+";"+DescSupp+";"+Accepter1+";"+Donateur1.ToString();
+            return DateRecept+";"+TypeMat1+";"+";"+ObjetID+";" + objet.ToString() + ";" + DescSupp+";"+Accepter1+";"+Donateur1.ToString();
         }
 
     }

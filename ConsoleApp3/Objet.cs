@@ -42,5 +42,11 @@ namespace ConsoleApp3
         public Beneficiaire Benef { get => benef; set => benef = value; }
         public bool Vendu { get => vendu; set => vendu = value; }
         public int Volume { get => 0; }
+
+        public override string ToString()
+        {
+            return objetid + Type + Description + LieuStock + état + Montant1;
+
+        }
     }
 }
