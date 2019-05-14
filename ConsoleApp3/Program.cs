@@ -130,9 +130,10 @@ namespace ConsoleApp3
                             //
                             Console.WriteLine();
                             Console.WriteLine("1 : Création d'un don");
-                            Console.WriteLine("2 : Transfert d'un don");
-                            Console.WriteLine("3 : Archiver un don");
-                            Console.WriteLine("4 : Sortir de ce module");
+                            Console.WriteLine("2 : Stockage d'un don");
+                            Console.WriteLine("3 : Transfert d'un don");
+                            Console.WriteLine("4 : Archiver un don");
+                            Console.WriteLine("5 : Sortir de ce module");
                             //
                             do
                             {
@@ -161,52 +162,21 @@ namespace ConsoleApp3
                                     
                                     break;
                                 case '2':
-
                                     Console.Clear();
-                                    Console.WriteLine("Voici les objets en attente : ");
-                                    List<Don> attente = association.Stockage.getEnAttente();
-                                    foreach(Don elem in attente)
-                                    {
-                                        Console.WriteLine(elem);
-                                    }
-                                    Console.WriteLine("Entrer le donID du don que vous souhaitez bougez");
-                                    string objetID = Console.ReadLine();
-                                    Console.WriteLine("Où souhaitez vous le stocker ? 1:Depot Vente, 2:Gardemeuble, 3:Je ne veux plus le bouger");
-                                    switch(Console.ReadLine())
-                                    {
-                                        case "1":
-                                            Console.WriteLine("Entrer le Montant : ");
-                                            string montant = Console.ReadLine();
-                                            association.Stockage.BougezDon(objetID, Int32.Parse(montant));
-                                            break;
-                                        case "2":
-                                            Console.WriteLine("Entrer le Nom du benificiaire : ");
-                                            Dictionary<string, Beneficiaire> benificaires = association.Benificaires;
-                                            foreach(KeyValuePair<string,Beneficiaire> elm in benificaires)
-                                            {
-                                                Console.WriteLine(elm.Value);
-                                            }
-                                            string name = Console.ReadLine();
-                                            Beneficiaire a = association.findName(name);
-                                            association.Stockage.BougezDon(objetID, a);
-                                            break;
-                                        case "3":
-                                            break;
-                                    }
 
                                     break;
                                 case '3':
                                     Console.Clear();
-                                    Console.WriteLine("Souhaitez vous finaliser la donation d'un Don(1) ou vendre (2) :");
-                                    string value = Console.ReadLine();
-
 
                                     break;
                                 case '4':
                                     Console.Clear();
+
+                                    break;
+                                case '5':
+                                    Console.Clear();
                                     fin2 = true;
                                     break;
-                                
                                 default:
                                     Console.WriteLine("\nchoix non valide => faites un autre choix....");
                                     break;
