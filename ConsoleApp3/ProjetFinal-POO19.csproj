@@ -66,6 +66,7 @@
     <Compile Include="Chaises.cs" />
     <Compile Include="Chevets.cs" />
     <Compile Include="Couverts.cs" />
+    <Compile Include="Cuisinière.cs" />
     <Compile Include="DepotVente.cs" />
     <Compile Include="Don.cs" />
     <Compile Include="Electro-menager.cs" />

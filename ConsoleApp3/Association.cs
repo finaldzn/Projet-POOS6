@@ -108,6 +108,20 @@ namespace ConsoleApp3
 
 
         }
+        public void Lirepersonnel()
+        {
+            Console.WriteLine("Possibles donnateurs : ");
+            Console.WriteLine("[ ID | Nom | Adresse | Téléphone | Prénom | Date de naissance ] ");
+            foreach (KeyValuePair<string, MembreAsso> elem in Personnel)
+            {
+                foreach (string x in elem.ToString().Split(';'))
+                {
+                    Console.Write(x + " | ");
+
+                }
+                Console.WriteLine("");
+            }
+        }
         /// <summary>
         /// trouve un benificiaire avec un numéro de téléphone spécifique
         /// </summary>
