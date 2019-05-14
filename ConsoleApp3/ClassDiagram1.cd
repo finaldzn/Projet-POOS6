@@ -1,101 +1,203 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ConsoleApp3.Association" Collapsed="true">
-    <Position X="3.25" Y="3.75" Width="1.5" />
+  <Class Name="ConsoleApp3.Armoires" Collapsed="true">
+    <Position X="14.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAgAAAAIAAAACAAAAAAAAAAIIAABACAAQgAAAQ=</HashCode>
-      <FileName>Association.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Armoires.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Assiettes" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Assiettes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Association" Collapsed="true">
+    <Position X="26.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAAAAICAAACQAAAIAAAAEIYAABACAgQgAAAQ=</HashCode>
+      <FileName>Association\Association.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Stockage" />
+      <Property Name="Stockage1" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ConsoleApp3.Beneficiaire" Collapsed="true">
-    <Position X="0.75" Y="1.75" Width="1.5" />
+    <Position X="0.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Beneficiaire.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAIAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Personne\Beneficiaire.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="ConsoleApp3.Chaises" Collapsed="true">
+    <Position X="23.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Chaises.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Chevets" Collapsed="true">
+    <Position X="19.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Chevets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Couverts" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Couverts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Cuisinière" Collapsed="true">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAEAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Cuisinière.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="ConsoleApp3.DepotVente" Collapsed="true">
-    <Position X="8.25" Y="3.5" Width="1.5" />
+    <Position X="27.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAhECAEJRACAAQAAgABAAAAAAAAA=</HashCode>
-      <FileName>DepotVente.cs</FileName>
+      <FileName>Association\DepotVente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApp3.Don" Collapsed="true">
-    <Position X="10.75" Y="4.5" Width="1.5" />
+    <Position X="25.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAABAAEAiEAAANAAAAARgQAAAoEAAAAAAA=</HashCode>
-      <FileName>Don.cs</FileName>
+      <FileName>Association\Don.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Objet1" />
-    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleApp3.Electro_menager" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Electro-menager.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApp3.Gardemeuble" Collapsed="true">
-    <Position X="12.25" Y="3.25" Width="1.5" />
+    <Position X="25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIBAAAAAQAAAAAAABACAEBQAAAAQAACABAAAgAAAAA=</HashCode>
-      <FileName>Gardemeuble.cs</FileName>
+      <FileName>Association\Gardemeuble.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Lave_Linge" Collapsed="true">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Lave-Linge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Matelas" Collapsed="true">
+    <Position X="17" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Matelas.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApp3.MembreAsso" Collapsed="true">
-    <Position X="3" Y="1.75" Width="1.5" />
+    <Position X="2.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MembreAsso.cs</FileName>
+      <FileName>Personne\MembreAsso.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ConsoleApp3.Objet" Collapsed="true">
-    <Position X="7.25" Y="4.75" Width="1.5" />
+  <Class Name="ConsoleApp3.MobilierChambre" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAgAAAAAgQgAAAEAgABAAQAAQIAAAEAQAA=</HashCode>
-      <FileName>Objet.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\MobilierChambre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.MobilierSalleCuisine" Collapsed="true">
+    <Position X="22.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\MobilierSalleCuisine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Objet" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAgAAAEAgQgAAAEAgABAAQAAQIIAAEAwAA=</HashCode>
+      <FileName>Objets\Objet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApp3.ObjetVoli" Collapsed="true">
-    <Position X="8.5" Y="5.5" Width="1.5" />
+    <Position X="1.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAYAAAAGAAAIAAAAAABA=</HashCode>
-      <FileName>ObjetVoli.cs</FileName>
+      <FileName>Objets\ObjetVoli.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConsoleApp3.Personne" Collapsed="true">
-    <Position X="3" Y="0.5" Width="1.5" />
+    <Position X="2.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAIAAQACAAMAAAAGACAABAAgA=</HashCode>
-      <FileName>Personne.cs</FileName>
+      <FileName>Personne\Personne.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ConsoleApp3.PersonneMorale" Collapsed="true">
-    <Position X="5.25" Y="1.75" Width="1.5" />
+    <Position X="5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PersonneMorale.cs</FileName>
+      <FileName>Personne\PersonneMorale.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ConsoleApp3.Stockage" Collapsed="true">
-    <Position X="7.25" Y="2.5" Width="1.5" />
+  <Class Name="ConsoleApp3.Program" Collapsed="true">
+    <Position X="28" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABCABEAAAAAAIAAAAAAECACAAAAAAEAEAAAABAAASA=</HashCode>
-      <FileName>Stockage.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Réfrigérateur" Collapsed="true">
+    <Position X="12.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Réfrigérateur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Stockage" Collapsed="true">
+    <Position X="26.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCABEAAAAAAIAAAAAAECACAAAAAAEIEAAAABAAASA=</HashCode>
+      <FileName>Association\Stockage.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="DepotVente" />
-      <Property Name="Gardemeuble" />
+      <Property Name="Gardemeuble1" />
+      <Property Name="DepotVente1" />
     </ShowAsAssociation>
   </Class>
+  <Class Name="ConsoleApp3.Table" Collapsed="true">
+    <Position X="21.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApp3.Vaisselle" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objets\Vaisselle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="ConsoleApp3.IPersonne&lt;T&gt;" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAQACAAAAAAACAAAABAAgA=</HashCode>
-      <FileName>IPersonne.cs</FileName>
+      <FileName>Personne\IPersonne.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

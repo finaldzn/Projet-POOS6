@@ -36,6 +36,22 @@ namespace ConsoleApp3
             }
         }
 
+        internal Gardemeuble Gardemeuble1
+        {
+            get => default(Gardemeuble);
+            set
+            {
+            }
+        }
+
+        internal DepotVente DepotVente1
+        {
+            get => default(DepotVente);
+            set
+            {
+            }
+        }
+
         public void AddGardeMeuble( Personne Benificiaire,Don var)
         {
             GardeMeuble.Add(var.DateRecept, Benificiaire, var);

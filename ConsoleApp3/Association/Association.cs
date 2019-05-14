@@ -26,6 +26,14 @@ namespace ConsoleApp3
             get => stockage; set => stockage = value;
         }
 
+        internal Stockage Stockage1
+        {
+            get => default(Stockage);
+            set
+            {
+            }
+        }
+
         public Association()
         {
             Stockage = new Stockage();
