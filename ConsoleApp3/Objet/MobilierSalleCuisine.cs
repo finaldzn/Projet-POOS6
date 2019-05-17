@@ -9,7 +9,7 @@ namespace ConsoleApp3
     class MobilierSalleCuisine : Objet
     {
        
-        public MobilierSalleCuisine(string objetid, string Type, string description, string lieuStock, int montant, string état) : base(objetid, Type, description, état, lieuStock, montant)
+        public MobilierSalleCuisine(string objetid, string Type, string description, string lieuStock, double montant, string état) : base(objetid, Type, description, état, lieuStock, montant)
         {
             //on vérifie le type de mobilier
             if(Type == "Salle" || Type == "Cuisine " || Type == "salle" || Type == "cuisine ") { this.Type = Type; }

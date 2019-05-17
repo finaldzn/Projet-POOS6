@@ -9,7 +9,7 @@ namespace ConsoleApp3
     class Cuisinière : Electro_menager
     {
         int puisssance, nb_plaques;
-        public Cuisinière(string objetid, string Type, string description, int puissance, int nb_plaques, string lieuStock, int montant, string état) : base(objetid, Type, description, lieuStock, montant, état)
+        public Cuisinière(string objetid, string Type, string description, int puissance, int nb_plaques, string lieuStock, double montant, string état) : base(objetid, Type, description, lieuStock, montant, état)
         {
             this.Description = "Cuisinière";
             this.puisssance = puissance;
@@ -17,7 +17,7 @@ namespace ConsoleApp3
         }
         public override string ToString()
         {
-            return base.ToString() + ";" + puisssance + "W;" + nb_plaques + "plaques";
+            return base.ToString() + puisssance + "W;" + nb_plaques + "plaques";
         }
     }
 }

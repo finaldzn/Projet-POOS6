@@ -8,7 +8,7 @@ namespace ConsoleApp3
 {
     class Chevets : MobilierChambre
     {
-        public Chevets(string objetid, string Type, string description, string lieuStock, int montant, string état) : base(objetid, Type, description, lieuStock, montant,état)
+        public Chevets(string objetid, string Type, string description, string lieuStock, double montant, string état) : base(objetid, Type, description, lieuStock, montant,état)
         {
             this.Description = "Chevet";
         }

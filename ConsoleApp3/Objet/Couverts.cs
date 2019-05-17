@@ -8,9 +8,10 @@ namespace ConsoleApp3
 {
     class Couverts : Vaisselle
     {
-        public Couverts(string objetid, string Type, string description, string lieuStock, int montant, string état,int nombre) : base(objetid, Type, description,nombre, lieuStock, montant, état)
+        public Couverts(string objetid, string Type, string description, string lieuStock, double montant, string état,int nombre) : base(objetid, Type, description,nombre, lieuStock, montant, état)
         {
             this.Description = "Couverts";
         }
+        
     }
 }

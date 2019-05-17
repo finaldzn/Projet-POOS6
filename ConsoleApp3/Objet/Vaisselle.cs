@@ -9,7 +9,7 @@ namespace ConsoleApp3
     class Vaisselle : Objet
     {
         int nombre;
-        public Vaisselle(string objetid, string Type, string description,int nombre, string lieuStock, int montant, string état) : base(objetid, Type, description, état, lieuStock, montant)
+        public Vaisselle(string objetid, string Type, string description,int nombre, string lieuStock, double montant, string état) : base(objetid, Type, description, état, lieuStock, montant)
         {
             this.nombre = nombre;
             this.Type = "Cuisine";

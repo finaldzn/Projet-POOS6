@@ -10,7 +10,7 @@ namespace ConsoleApp3
     {
         string forme;
 
-        public Table(string objetid, string Type, string description,string forme, string lieuStock, int montant, string état) : base(objetid, Type, description, lieuStock, montant,état)
+        public Table(string objetid, string Type, string description,string forme, string lieuStock, double montant, string état) : base(objetid, Type, description, lieuStock, montant,état)
         {
             this.Description = "Table";
             if (forme == "carrée" || forme == "rectangulaire " || forme == "ronde") { this.forme = forme; }
@@ -18,7 +18,7 @@ namespace ConsoleApp3
         }
         public override string ToString()
         {
-            return base.ToString() + ";" + forme;
+            return base.ToString() + forme;
         }
     }
 }

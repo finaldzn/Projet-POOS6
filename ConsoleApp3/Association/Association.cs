@@ -208,11 +208,12 @@ namespace ConsoleApp3
             float moy = 0;
             foreach(string elem in x)
             {
-                moy += float.Parse(elem.Split(';')[2]);
+                moy += float.Parse(elem.Split(';')[5]);
             }
             moy = moy / x.Count;
             return moy;
         }
+ 
         /// <summary>
         /// avoir la moyenne de l'âges des membres
         /// </summary>
@@ -228,6 +229,7 @@ namespace ConsoleApp3
             moy = moy / benificaires.Count;
             return moy;
         }
+
         #endregion
     }
 }

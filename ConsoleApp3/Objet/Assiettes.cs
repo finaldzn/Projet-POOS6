@@ -8,7 +8,7 @@ namespace ConsoleApp3
 {
     class Assiettes : Vaisselle
     {
-        public Assiettes(string objetid, string Type, string description,int nombre, string lieuStock, int montant, string état) : base(objetid, Type, description,nombre, lieuStock, montant, état)
+        public Assiettes(string objetid, string Type, string description,int nombre, string lieuStock, double montant, string état) : base(objetid, Type, description,nombre, lieuStock, montant, état)
         {
             this.Description = "Assiettes";
         }

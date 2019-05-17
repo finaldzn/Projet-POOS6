@@ -10,11 +10,11 @@ namespace ConsoleApp3
     {
         protected string objetid, Type, Description, LieuStock;
         Beneficiaire benef;
-        int Montant;
+        double Montant;
         bool vendu;
         string état;
 
-        public Objet(string objetid, string type, string description, string état, string lieuStock, int montant)
+        public Objet(string objetid, string type, string description, string état, string lieuStock, double montant)
         {
             this.état = état;
             this.Objetid = objetid;
@@ -38,15 +38,16 @@ namespace ConsoleApp3
         public string Etat { get => état; }
         public string Description1 { get => Description; set => Description = value; }
         public string LieuStock1 { get => LieuStock; set => LieuStock = value; }
-        public int Montant1 { get => Montant; set => Montant = value; }
+        public double Montant1 { get => Montant; set => Montant = value; }
         public Beneficiaire Benef { get => benef; set => benef = value; }
         public bool Vendu { get => vendu; set => vendu = value; }
         public int Volume { get => 0; }
 
         public override string ToString()
         {
-            return objetid + Type + Description + LieuStock + état + Montant1;
+            return objetid +";"+ Type + ";"+ Description + ";" + LieuStock + ";" + état + ";" + Montant1;
 
         }
+
     }
 }

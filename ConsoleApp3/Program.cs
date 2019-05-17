@@ -12,7 +12,19 @@ namespace ConsoleApp3
         {
             Association association = new Association();
             association.Peupler();
-
+            MembreAsso donnateur = new MembreAsso("1", "Blabla", "chris", "3hkefh", "0655214", "donnateur");
+            Objet ok = new Objet("42", "Salon", "Table", "bien", "Garde Meuble", 0);
+            association.NouveauDon("12/05/2015", "bois", "bois", true, ok, true, "1");
+            Objet ok1 = new Objet("22", "Salon", "chaise", "bien", "Garde Meuble", 0);
+            association.NouveauDon("12/06/2015", "bois", "bois", true, ok, true, "1");
+            Objet ok2 = new Objet("2", "Salon", "frigo", "bien", "Garde Meuble", 0);
+            association.NouveauDon("13/05/2015", "bois", "bois", false, ok, true, "1");
+            Objet ok3 = new Objet("44", "Salon", "meuble", "bien", "Garde Meuble", 0);
+            association.NouveauDon("2/05/2015", "bois", "bois", true, ok, true, "5");
+            Objet ok4 = new Objet("52", "Salon", "armoire", "bien", "Garde Meuble", 0);
+            association.NouveauDon("16/05/2015", "bois", "bois", false, ok, true, "2");
+            Objet ok5 = new Objet("66", "Salon", "cuisiniere", "bien", "Garde Meuble", 0);
+            association.NouveauDon("25/05/2015", "bois", "bois", true, ok, false, "2");
             /* Console.WriteLine(association.getmoyAge());
 
            
@@ -170,8 +182,8 @@ namespace ConsoleApp3
                                     string type = "";
                                     string description = "";
                                     string état = "";
-                                    string lieuStock = "";
-                                    int montant = 0;
+                                    string lieuStock = "association";
+                                    double montant = 0;
                                     
                                     Console.Clear();
 
@@ -292,80 +304,34 @@ namespace ConsoleApp3
                                    
                                     Console.WriteLine(" Entrez une description plus détaillé du don : ");
                                     descSupp = Console.ReadLine();
-                                    Console.Clear();
-                                    Console.WriteLine("Ou souhaitez vous le stocker ? ");
-                                    bool valid7 = true;
-                                    string lecture7 = "";
-
-                                    Console.WriteLine();
-
-                                    Console.WriteLine("1 : Garde Meuble");
-                                    Console.WriteLine("2 : Dépot Vente");
-                                    Console.WriteLine("3 : Association");
-
-                                    //
-                                    do
-                                    {
-                                        lecture7 = "";
-                                        valid7 = true;
-
-                                        Console.Write("\nchoisissez un programme > ");
-                                        lecture7 = Console.ReadLine();
-                                        Console.WriteLine(lecture7);
-                                        if (lecture7 == "" || !"123".Contains(lecture7[0]))
-                                        {
-                                            Console.WriteLine("votre choix <" + lecture7 + "> n'est pas valide = > recommencez ");
-                                            valid7 = false;
-                                        }
-                                    } while (!valid7);
-                                    //
-                                    //
-                                    switch (lecture7[0])
-                                    {
-                                        case '1':
-                                            Console.Clear();
-                                            lieuStock = "Garde Meuble";
-                                            break;
-                                        case '2':
-                                            Console.Clear();
-                                            lieuStock = "Depot vente";
-                                            break;
-                                        case '3':
-                                            Console.Clear();
-                                            lieuStock = "Association";
-                                            break;
-                                        default:
-                                            Console.WriteLine("\nchoix non valide => faites un autre choix....");
-                                            break;
-                                    }
-
 
                                     bool fin3 = false;
                                     bool valid3 = true;
                                     string lecture3 = "";
-
+                                    Console.Clear();
                                     //Menu interactif
                                     //---------------
                                   
                                         fin3 = false;
                                         //
-                                        Console.WriteLine(" Entrez quel type d'objet est le don : ");
-                                        Console.WriteLine("1 : Mobilier Chambre");
-                                        Console.WriteLine("2 : Mobilier Salle ou Cuisine");
-                                        Console.WriteLine("3 : Electro-ménager");
-                                        Console.WriteLine("4 : Vaisselle");
-                                        Console.WriteLine("5 : Autre");
+
                                        
                                         //
                                         do
                                         {
                                             lecture3 = "";
                                             valid3 = true;
-
+                                            Console.WriteLine(" Entrez quel type d'objet est le don : ");
+                                            Console.WriteLine("1 : Mobilier Chambre");
+                                            Console.WriteLine("2 : Mobilier Salle ou Cuisine");
+                                            Console.WriteLine("3 : Electro-ménager");
+                                            Console.WriteLine("4 : Vaisselle");
+                                            Console.WriteLine("5 : Objet Volumineux");
+                                            Console.WriteLine("6 : Autre");
                                             Console.Write("\nchoisissez un programme > ");
                                             lecture3 = Console.ReadLine();
                                             Console.WriteLine(lecture3);
-                                            if (lecture3 == "" || !"12345".Contains(lecture3[0]))
+                                            if (lecture3 == "" || !"123456".Contains(lecture3[0]))
                                             {
                                                 Console.WriteLine("votre choix <" + lecture3 + "> n'est pas valide = > recommencez ");
                                                 valid3 = false;
@@ -608,14 +574,34 @@ namespace ConsoleApp3
                                                 } while (!fin4);
                                                 break;
 
-
                                             case '5':
+
                                                 Console.Clear();
                                                 Console.WriteLine("Pour quelle pièce est fait votre objet ? ");
                                                 string piece = Console.ReadLine();
                                                 Console.Clear();
                                                 Console.WriteLine("Comment s'appelle votre objet ? ");
                                                 string nom_objet = Console.ReadLine();
+                                                Console.Clear();
+                                                Console.WriteLine("Quelle est la hauteur de l'objet ? ");
+                                                double hauteur = Convert.ToDouble(Console.ReadLine());
+                                                Console.Clear();
+                                                Console.WriteLine("Quelle est la longueur de l'objet ? ");
+                                                double longueur = Convert.ToDouble(Console.ReadLine());
+                                                Console.Clear();
+                                                Console.WriteLine("Quelle est la largeur de l'objet ? ");
+                                                double largeur = Convert.ToDouble(Console.ReadLine());
+                                                Console.Clear();
+                                                newobjet = new ObjetVoli(objetid, piece, nom_objet,lieuStock, montant,hauteur,largeur,longueur,état);
+                                            break;
+
+                                            case '6':
+                                                Console.Clear();
+                                                Console.WriteLine("Pour quelle pièce est fait votre objet ? ");
+                                                piece = Console.ReadLine();
+                                                Console.Clear();
+                                                Console.WriteLine("Comment s'appelle votre objet ? ");
+                                                nom_objet = Console.ReadLine();
                                                 newobjet = new Objet(objetid, piece, nom_objet, état, lieuStock, montant);
                                                 break;
 
@@ -625,11 +611,11 @@ namespace ConsoleApp3
                                         }
 
                                     Don crea = new Don(datereception, typeMat, descSupp, personnel, Accepter, newobjet);
-                                    Console.WriteLine(crea.ToString());
-
+                                    Console.WriteLine(crea.ToString());                                 
                                     association.NouveauDon(datereception, typeMat, descSupp, Accepter, newobjet, stocker, MembreAssoID);
 
-                                   
+
+
 
 
 
@@ -689,14 +675,147 @@ namespace ConsoleApp3
                         break;
                     case '3':
                         Console.Clear();
+                        Console.WriteLine("Que souhaitez vous regarder ? ");
+                        Console.WriteLine("1: Don refusés, triés par date \n2: Don en traitement par ID et Nom \n3: Don vendus/donnés par mois/BenefId \n4: Don stocker différents entrepôts classé par catégorie \n5: Don stocker par Entrepôts et par volume \n6: Dons du dépot-vente ");
+                        string value = Console.ReadLine();
+                        switch (value)
+                        {
+                            case "1":
+                                List<Don> a = association.Stockage.getRefused();
+                                foreach (Don elm in a)
+                                {
+                                    Console.WriteLine(elm.ToString());
+                                }
 
+                                break;
+                            case "2":
+                                a = association.Stockage.getEnAttente();
+                                foreach (Don elm in a)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+
+                                break;
+                            case "3":
+                                List<string> v = association.Stockage.getSold();
+                                foreach (string elm in v)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+
+                                break;
+                            case "4":
+                                v = association.Stockage.getEntrepotList();
+                                foreach (string elm in v)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+
+                                break;
+                            case "5":
+                                v = association.Stockage.getEntrepotVolumeList();
+                                foreach (string elm in v)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+
+                                break;
+                            case "6":
+                                v = association.Stockage.getDepotVente();
+                                foreach (string elm in v)
+                                {
+                                    Console.WriteLine(elm);
+                                }
+                                break;
+                        }
+                        Console.ReadLine();
+                        Console.Clear();
                         break;
                     case '4':
                         Console.Clear();
-
+                        Console.WriteLine("Quel stats souhaitez vous voir ?");
+                        Console.WriteLine("1: Moyenne de temps Don \n2: Moyenne Prix objets Depot Vente\n3: Moyenne d'age des beneficiaire");
+                        value = Console.ReadLine();
+                        switch (value)
+                        {
+                            case "1":
+                                Console.WriteLine(association.getmoyTemps());
+                                break;
+                            case "2":
+                                Console.WriteLine(association.getmoyPrix());
+                                break;
+                            case "3":
+                                Console.WriteLine(association.getmoyAge());
+                                break;
+                        }
                         break;
                     case '5':
+
                         Console.Clear();
+                        fin = false;
+                        valid = true;
+                        lecture = "";
+
+                        //Menu interactif
+                        //---------------
+                        do
+                        {
+                            fin = false;
+                            //
+                            Console.WriteLine();
+                            Console.WriteLine("1 : Appliquer une promotion");
+                            Console.WriteLine("2 : Chercher les objets sous un certain prix");
+                            Console.WriteLine("3 : Saisie d'un crime");
+                            Console.WriteLine("4 : Le nombre de crimes par quartier et par catégorie");
+
+                            //
+                            do
+                            {
+                                lecture = "";
+                                valid = true;
+
+                                Console.Write("\nchoisissez un programme > ");
+                                lecture = Console.ReadLine();
+                                Console.WriteLine(lecture);
+                                if (lecture == "" || !"1234".Contains(lecture[0]))
+                                {
+                                    Console.WriteLine("votre choix <" + lecture + "> n'est pas valide = > recommencez ");
+                                    valid = false;
+                                }
+                            } while (!valid);
+                            //
+                            //
+                            switch (lecture[0])
+                            {
+                                case '1':
+                                    Console.Clear();
+                                    Console.WriteLine("Entrez en % la promotion que vous voulez appliquez : ");
+                                    double pourcentage = Convert.ToDouble(Console.ReadLine());
+                                    association.Stockage.DepotVente.getPromo(pourcentage);
+                                    Console.WriteLine("Promotion appliquée");
+                                    break;
+                                case '2':
+                                    Console.Clear();
+                                    Console.WriteLine("Entrez le prix maximal des objets que vous voulez afficher : ");
+                                    double prix = Convert.ToDouble(Console.ReadLine());
+                                    association.Stockage.DepotVente.AfficherSelonPrix(prix);
+                                    break;
+                                case '3':
+                                    Console.Clear();
+
+                                    break;
+
+                                case '4':
+                                    Console.Clear();
+                                    Console.WriteLine("fin de programme...");
+                                    Console.ReadKey();
+                                    fin = true;
+                                    break;
+                                default:
+                                    Console.WriteLine("\nchoix non valide => faites un autre choix....");
+                                    break;
+                            }
+                        } while (!fin);
 
                         break;
                     case '6':
