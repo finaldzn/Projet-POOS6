@@ -26,14 +26,6 @@ namespace ConsoleApp3
             get => stockage; set => stockage = value;
         }
 
-        internal Stockage Stockage1
-        {
-            get => default(Stockage);
-            set
-            {
-            }
-        }
-
         public Association()
         {
             Stockage = new Stockage();
@@ -221,6 +213,7 @@ namespace ConsoleApp3
             moy = moy / x.Count;
             return moy;
         }
+ 
         /// <summary>
         /// avoir la moyenne de l'âges des membres
         /// </summary>
@@ -236,6 +229,7 @@ namespace ConsoleApp3
             moy = moy / benificaires.Count;
             return moy;
         }
+
         #endregion
     }
 }
