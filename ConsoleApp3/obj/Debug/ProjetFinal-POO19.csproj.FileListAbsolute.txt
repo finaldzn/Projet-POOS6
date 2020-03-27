@@ -14,3 +14,11 @@ C:\Users\Wassim Serradj\Documents\GitHub\Projet-POOS6\ConsoleApp3\obj\Debug\Cons
 C:\Users\Wassim Serradj\Documents\GitHub\Projet-POOS6\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
 C:\Users\Victor\source\repos\ConsoleApp3\ConsoleApp3\bin\Debug\Code.xml
 C:\Users\Wassim Serradj\Documents\GitHub\Projet-POOS6\ConsoleApp3\bin\Debug\Code.xml
+C:\Users\Victor\Desktop\ProjetPOO\Nouveau dossier\Projet-POOS6\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+C:\Users\Victor\Desktop\ProjetPOO\Nouveau dossier\Projet-POOS6\ConsoleApp3\bin\Debug\Code.xml
+C:\Users\Victor\Desktop\ProjetPOO\Nouveau dossier\Projet-POOS6\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+C:\Users\Victor\Desktop\ProjetPOO\Nouveau dossier\Projet-POOS6\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+C:\Users\Victor\Desktop\ProjetPOO\Nouveau dossier\Projet-POOS6\ConsoleApp3\obj\Debug\ProjetFinal-POO19.csprojAssemblyReference.cache
+C:\Users\Victor\Desktop\ProjetPOO\Nouveau dossier\Projet-POOS6\ConsoleApp3\obj\Debug\ProjetFinal-POO19.csproj.CoreCompileInputs.cache
+C:\Users\Victor\Desktop\ProjetPOO\Nouveau dossier\Projet-POOS6\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+C:\Users\Victor\Desktop\ProjetPOO\Nouveau dossier\Projet-POOS6\ConsoleApp3\obj\Debug\ConsoleApp3.pdb

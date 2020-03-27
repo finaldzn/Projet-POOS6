@@ -12,9 +12,9 @@ namespace ConsoleApp3
         {
             Association association = new Association();
             association.Peupler();
-            
+
             /* Console.WriteLine(association.getmoyAge());
-            
+
            
 
              Objet objet = new Objet("1", "Salon", "chaise rouge","neuf", "Association", 0);
@@ -701,7 +701,6 @@ namespace ConsoleApp3
                                 {
                                     Console.WriteLine(a);
                                 }
-                                
                                 break;
                             case "2":
                                 a = association.Stockage.getEnAttente();
@@ -709,7 +708,6 @@ namespace ConsoleApp3
                                 {
                                     Console.WriteLine(elm);
                                 }
-                                
                                 break;
                             case "3":
                                 List<string> v = association.Stockage.getSold();
@@ -717,7 +715,6 @@ namespace ConsoleApp3
                                 {
                                     Console.WriteLine(elm);
                                 }
-                                
                                 break;
                             case "4":
                                 v = association.Stockage.getEntrepotList();
@@ -725,7 +722,6 @@ namespace ConsoleApp3
                                 {
                                     Console.WriteLine(elm);
                                 }
-                                
                                 break;
                             case "5":
                                 v = association.Stockage.getEntrepotVolumeList();
@@ -733,7 +729,6 @@ namespace ConsoleApp3
                                 {
                                     Console.WriteLine(elm);
                                 }
-                                
                                 break;
                             case "6":
                                 v = association.Stockage.getDepotVente();
@@ -743,27 +738,11 @@ namespace ConsoleApp3
                                 }
                                 break;
                         }
-                        Console.ReadLine();
                         Console.Clear();
                         break;
                     case '4':
-
                         Console.Clear();
-                        Console.WriteLine("Quel stats souhaitez vous voir ?");
-                        Console.WriteLine("1: Moyenne de temps Don \n2: Moyenne Prix objets Depot Vente\n3: Moyenne d'age des beneficiaire");
-                        value = Console.ReadLine();
-                        switch (value)
-                        {
-                            case "1":
-                                Console.WriteLine(association.getmoyTemps());
-                                break;
-                            case "2":
-                                Console.WriteLine(association.getmoyPrix());
-                                break;
-                            case "3":
-                                Console.WriteLine(association.getmoyAge());
-                                break;
-                        }
+
                         break;
                     case '5':
                         Console.Clear();

@@ -48,6 +48,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -59,34 +65,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Armoires.cs" />
-    <Compile Include="Assiettes.cs" />
-    <Compile Include="Association.cs" />
-    <Compile Include="Beneficiaire.cs" />
-    <Compile Include="Chaises.cs" />
-    <Compile Include="Chevets.cs" />
-    <Compile Include="Couverts.cs" />
-    <Compile Include="Cuisinière.cs" />
-    <Compile Include="DepotVente.cs" />
-    <Compile Include="Don.cs" />
-    <Compile Include="Electro-menager.cs" />
-    <Compile Include="Gardemeuble.cs" />
-    <Compile Include="IPersonne.cs" />
-    <Compile Include="Lave-Linge.cs" />
-    <Compile Include="Matelas.cs" />
-    <Compile Include="MembreAsso.cs" />
-    <Compile Include="MobilierChambre.cs" />
-    <Compile Include="MobilierSalleCuisine.cs" />
-    <Compile Include="Objet.cs" />
-    <Compile Include="ObjetVoli.cs" />
-    <Compile Include="Personne.cs" />
-    <Compile Include="PersonneMorale.cs" />
+    <Compile Include="Objets\Armoires.cs" />
+    <Compile Include="Objets\Assiettes.cs" />
+    <Compile Include="Association\Association.cs" />
+    <Compile Include="Personne\Beneficiaire.cs" />
+    <Compile Include="Objets\Chaises.cs" />
+    <Compile Include="Objets\Chevets.cs" />
+    <Compile Include="Objets\Couverts.cs" />
+    <Compile Include="Objets\Cuisinière.cs" />
+    <Compile Include="Association\DepotVente.cs" />
+    <Compile Include="Association\Don.cs" />
+    <Compile Include="Objets\Electro-menager.cs" />
+    <Compile Include="Association\Gardemeuble.cs" />
+    <Compile Include="Personne\IPersonne.cs" />
+    <Compile Include="Objets\Lave-Linge.cs" />
+    <Compile Include="Objets\Matelas.cs" />
+    <Compile Include="Personne\MembreAsso.cs" />
+    <Compile Include="Objets\MobilierChambre.cs" />
+    <Compile Include="Objets\MobilierSalleCuisine.cs" />
+    <Compile Include="Objets\Objet.cs" />
+    <Compile Include="Objets\ObjetVoli.cs" />
+    <Compile Include="Personne\Personne.cs" />
+    <Compile Include="Personne\PersonneMorale.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Réfrigérateur.cs" />
-    <Compile Include="Stockage.cs" />
-    <Compile Include="Table.cs" />
-    <Compile Include="Vaisselle.cs" />
+    <Compile Include="Objets\Réfrigérateur.cs" />
+    <Compile Include="Association\Stockage.cs" />
+    <Compile Include="Objets\Table.cs" />
+    <Compile Include="Objets\Vaisselle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -104,5 +110,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

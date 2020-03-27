@@ -25,7 +25,7 @@ namespace ConsoleApp3
         {
             get => stockage; set => stockage = value;
         }
-        
+
         public Association()
         {
             Stockage = new Stockage();
@@ -169,7 +169,8 @@ namespace ConsoleApp3
             Don var = new Don(dateRecept, typeMat, descSupp, Personnel[MembreAssoID], Accepter, objet);
             Stockage.AddAssociation(var);
             
-        }        
+        }
+        
         private List<int> decomposerDate(string date)
         {
             List<int> value = new List<int>();
