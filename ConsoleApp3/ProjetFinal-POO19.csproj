@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Objets\Armoires.cs" />
     <Compile Include="Objets\Assiettes.cs" />
     <Compile Include="Association\Association.cs" />
@@ -85,14 +86,43 @@
     <Compile Include="Objets\MobilierSalleCuisine.cs" />
     <Compile Include="Objets\Objet.cs" />
     <Compile Include="Objets\ObjetVoli.cs" />
+=======
+    <Compile Include="Objet\Armoires.cs" />
+    <Compile Include="Objet\Assiettes.cs" />
+    <Compile Include="Association\Association.cs" />
+    <Compile Include="Personne\Beneficiaire.cs" />
+    <Compile Include="Objet\Chaises.cs" />
+    <Compile Include="Objet\Chevets.cs" />
+    <Compile Include="Objet\Couverts.cs" />
+    <Compile Include="Objet\Cuisinière.cs" />
+    <Compile Include="Association\DepotVente.cs" />
+    <Compile Include="Association\Don.cs" />
+    <Compile Include="Objet\Electro-menager.cs" />
+    <Compile Include="Association\Gardemeuble.cs" />
+    <Compile Include="Personne\IPersonne.cs" />
+    <Compile Include="Objet\Lave-Linge.cs" />
+    <Compile Include="Objet\Matelas.cs" />
+    <Compile Include="Personne\MembreAsso.cs" />
+    <Compile Include="Objet\MobilierChambre.cs" />
+    <Compile Include="Objet\MobilierSalleCuisine.cs" />
+    <Compile Include="Objet\Objet.cs" />
+    <Compile Include="Objet\ObjetVoli.cs" />
+>>>>>>> 16fb3ebe0faedfe1e2120fc985b24febd299fc99
     <Compile Include="Personne\Personne.cs" />
     <Compile Include="Personne\PersonneMorale.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="Objets\Réfrigérateur.cs" />
     <Compile Include="Association\Stockage.cs" />
     <Compile Include="Objets\Table.cs" />
     <Compile Include="Objets\Vaisselle.cs" />
+=======
+    <Compile Include="Objet\Réfrigérateur.cs" />
+    <Compile Include="Association\Stockage.cs" />
+    <Compile Include="Objet\Table.cs" />
+    <Compile Include="Objet\Vaisselle.cs" />
+>>>>>>> 16fb3ebe0faedfe1e2120fc985b24febd299fc99
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

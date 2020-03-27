@@ -9,9 +9,12 @@ namespace ConsoleApp3
 {
     class Stockage
     {
-        protected Gardemeuble GardeMeuble;
-        protected DepotVente DépotVente;
+        private Gardemeuble gardeMeuble;
+        private DepotVente dépotVente;
         protected List<Don> Association;
+
+        public Gardemeuble GardeMeuble { get => gardeMeuble; set => gardeMeuble = value; }
+        public DepotVente DépotVente { get => dépotVente; set => dépotVente = value; }
 
         public Stockage()
         {
@@ -20,37 +23,7 @@ namespace ConsoleApp3
             Association = new List<Don>();
         }
 
-        internal DepotVente DepotVente
-        {
-            get => default(DepotVente);
-            set
-            {
-            }
-        }
-
-        internal Gardemeuble Gardemeuble
-        {
-            get => default(Gardemeuble);
-            set
-            {
-            }
-        }
-
-        internal Gardemeuble Gardemeuble1
-        {
-            get => default(Gardemeuble);
-            set
-            {
-            }
-        }
-
-        internal DepotVente DepotVente1
-        {
-            get => default(DepotVente);
-            set
-            {
-            }
-        }
+       
 
         public void AddGardeMeuble( Personne Benificiaire,Don var)
         {
@@ -108,6 +81,7 @@ namespace ConsoleApp3
         {
             
             List<Don> result = Association.OrderBy(o => o.ObjetID).ThenBy(o => o.Donateur1).ToList();
+
             return result;
         }
         /// <summary>
